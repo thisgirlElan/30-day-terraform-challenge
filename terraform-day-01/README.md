@@ -10,7 +10,7 @@ I documented my full Day 1 experience here:
 
 👉🏽 [Read the Blog](https://buildwithelan.hashnode.dev/what-is-infrastructure-as-code-and-why-it-s-transforming-devops)
 
-## 📌 What This Project Creates
+## What This Project Creates
 
 This configuration provisions:
 
@@ -22,7 +22,7 @@ This configuration provisions:
 - Route table **associations**
 - Supporting resources like **Elastic IPs**
 
-## 🧠 Architecture Overview (Simplified)
+## Architecture Overview (Simplified)
 ```text
 VPC
 ├── Public Subnets
@@ -37,7 +37,7 @@ VPC
 └── Private → NAT
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 .
@@ -45,7 +45,7 @@ VPC
 ├── variables.tf    # Input variables (region, CIDR, subnet configs)
 ├── .env    # Credentials file (not committed)
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 Make sure you have:
 
@@ -57,7 +57,7 @@ Make sure you have:
 aws configure
 ```
 
-## 🔐 Environment Variables (Recommended)
+## Environment Variables (Recommended)
 
 Instead of hardcoding credentials, export them:
 
@@ -66,7 +66,7 @@ export AWS_ACCESS_KEY_ID="<YOUR ACCESS KEY>"
 export AWS_SECRET_ACCESS_KEY="<YOUR SECRET KEY>"
 ```
 
-## 🚀 How to Run
+## How to Run
 
 1. Initialize Terraform
 ```bash
@@ -83,13 +83,13 @@ terraform plan
 terraform apply -auto-approve
 ```
 
-## 🧹 Clean Up (Important 💸)
+## Clean Up (Important 💸)
 
 To avoid unnecessary AWS charges:
 ```bash
 terraform destroy -auto-approve
 ```
-## 🧠 Key Learnings
+## Key Learnings
 
 This lab helped me understand:
 
@@ -99,17 +99,17 @@ This lab helped me understand:
 - Why NAT Gateways are needed for private subnet internet access
 - That infrastructure has a lot of moving parts 😅
 
-## ⚠️ Notes
+## Notes
 - NAT Gateways can incur costs (remember to destroy resources after use)
 - This setup is for learning purposes and may not reflect production best practices
 
-## 📚 Resources & Attribution
+## Resources & Attribution
 
 This lab was inspired by and adapted from:
 
 [hashicorp: Benefits of Iac Lab](https://github.com/btkrausen/hashicorp/blob/master/terraform/Hands-On%20Labs/Section%2002%20-%20Understand%20IAC%20Concepts/02%20-%20Benefits_of_Infrastructure_as_Code.md)
 
-## 💬 Final Thought
+## Final Thought
 
 This was my first time defining networking infrastructure end-to-end instead of clicking through AWS. 
 
