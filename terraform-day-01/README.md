@@ -10,8 +10,6 @@ I documented my full Day 1 experience here:
 
 👉🏽 [Read the Blog](https://buildwithelan.hashnode.dev/what-is-infrastructure-as-code-and-why-it-s-transforming-devops)
 
----
-
 ## 📌 What This Project Creates
 
 This configuration provisions:
@@ -24,10 +22,8 @@ This configuration provisions:
 - Route table **associations**
 - Supporting resources like **Elastic IPs**
 
----
-
 ## 🧠 Architecture Overview (Simplified)
-
+```text
 VPC
 ├── Public Subnets
 │ ├── Internet Gateway (IGW)
@@ -39,9 +35,7 @@ VPC
 └── Route Tables
 ├── Public → IGW
 └── Private → NAT
-
-
----
+```
 
 ## 📁 Project Structure
 
@@ -62,8 +56,6 @@ Make sure you have:
 ```bash
 aws configure
 ```
-
----
 
 ## 🔐 Environment Variables (Recommended)
 
